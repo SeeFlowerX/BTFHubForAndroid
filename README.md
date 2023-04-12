@@ -46,6 +46,23 @@ make -j$(nproc --all) O=out ARCH=arm64 CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COM
 
 vmlinux is out here => `./out/vmlinux`
 
+---
+
+**build common-android13-5.10 kernel with BTF example**
+
+CONFIG_DEBUG_INFO_BTF enabled default, just directly build
+
+```bash
+git clone https://gerrit.googlesource.com/git-repo
+mkdir android-kernel && cd android-kernel
+../git-repo/repo init --depth=1 --u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/kernel/manifest -b common-android13-5.10
+../git-repo/repo sync -j$(nproc --all)
+
+CCACHE="/usr/bin/ccache" LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh
+```
+
+vmlinux is out here => `./out/android13-5.10/dist/vmlinux`
+
 # Build Pahole
 
 ```bash
