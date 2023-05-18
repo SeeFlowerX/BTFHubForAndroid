@@ -88,3 +88,5 @@ tar cvfJ "./a12-5.10-arm64.btf.tar.xz" a12-5.10-arm64.btf
 - [KernelSU_Action build-kernel.yml](https://github.com/xiaoleGun/KernelSU_Action/blob/main/.github/workflows/build-kernel.yml)
 - [KernelSU gki-kernel.yml](https://github.com/tiann/KernelSU/blob/main/.github/workflows/gki-kernel.yml)
 - [btfhub update.sh](https://github.com/aquasecurity/btfhub/blob/main/tools/update.sh)
+- [为vmlinux生成BTFhub这样的btf文件](https://blog.seeflower.dev/archives/217/)
+- [安卓通用内核编译零碎记录](https://blog.seeflower.dev/archives/231/)
