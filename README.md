@@ -11,7 +11,7 @@ sync kernel source code
 ```bash
 git clone https://gerrit.googlesource.com/git-repo
 mkdir android-kernel && cd android-kernel
-../git-repo/repo init --depth=1 --u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
+../git-repo/repo init --depth=1 -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10
 ../git-repo/repo sync -j$(nproc --all)
 ```
 
@@ -55,7 +55,7 @@ CONFIG_DEBUG_INFO_BTF enabled default, just directly build
 ```bash
 git clone https://gerrit.googlesource.com/git-repo
 mkdir android-kernel && cd android-kernel
-../git-repo/repo init --depth=1 --u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/kernel/manifest -b common-android13-5.10
+../git-repo/repo init --depth=1 -u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/kernel/manifest -b common-android13-5.10
 ../git-repo/repo sync -j$(nproc --all)
 
 CCACHE="/usr/bin/ccache" LTO=thin BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh
